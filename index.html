@@ -1,0 +1,66 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sheira-M1W4 - Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { darkMode: 'class' }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-[#f5f5f5] dark:bg-gray-900 min-h-screen flex flex-col transition-colors duration-300">
+
+<header class="bg-[#1d2746] dark:bg-[#0d1b2a] w-full h-[90px] flex items-center transition-colors duration-300">
+    <div class="container w-[95%] mx-auto flex justify-between items-center">
+        <h1 class="text-white text-[26px] font-bold">Sheira-M1W4</h1>
+        
+        <div class="flex items-center gap-4">
+            <nav>
+                <ul class="flex list-none">
+                    <li class="ml-[35px]"><a href="index.html" class="text-white no-underline text-[20px] font-semibold hover:text-[#ffd700] transition">Home</a></li>
+                    <li class="ml-[35px]"><a href="projects.html" class="text-white no-underline text-[20px] font-semibold hover:text-[#ffd700] transition">Projects</a></li>
+                    <li class="ml-[35px]"><a href="contact.html" class="text-white no-underline text-[20px] font-semibold hover:text-[#ffd700] transition">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Dark Mode Toggle -->
+            <button id="themeToggle" class="w-[50px] h-[28px] rounded-full bg-gray-300 dark:bg-[#1a4a8d] relative transition-colors duration-300 flex-shrink-0">
+                <span class="absolute top-[3px] left-[3px] w-[22px] h-[22px] bg-white rounded-full shadow-md transition-all duration-300 dark:translate-x-[22px]"></span>
+                <i class="fas fa-moon absolute top-1/2 -translate-y-1/2 left-[6px] text-[12px] text-gray-600 dark:text-[#ffd700]"></i>
+                <i class="fas fa-sun absolute top-1/2 -translate-y-1/2 right-[6px] text-[12px] text-[#ffd700]"></i>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main class="flex-1 flex items-center justify-center">
+    <section class="w-full max-w-[1100px] mx-auto px-4">
+        <div class="bg-white dark:bg-[#16213e] p-[45px_30px] rounded-[18px] text-center shadow-[0_4px_10px_rgba(0,0,0,.08)] dark:shadow-[0_4px_10px_rgba(0,0,0,.3)] max-w-2xl mx-auto transition-all duration-300">
+            <i class="fas fa-clipboard-check text-[50px] text-[#1b2d6b] dark:text-[#4a7fc1] mb-[25px]"></i>
+            <h3 class="text-[36px] mb-[18px] text-[#333] dark:text-[#e0e0e0]">Welcome to the Home-Page</h3>
+            <p class="text-[22px] leading-relaxed text-[#666] dark:text-[#b0b0b0]">
+                These program contains some projects and contacting email address
+            </p>
+        </div>
+    </section>
+</main>
+
+<footer class="bg-[#111] text-white text-center py-[15px]">
+    <p>&copy; 2026 sheira-m1w4</p>
+</footer>
+
+<script>
+const toggleBtn = document.getElementById('themeToggle');
+toggleBtn.addEventListener('click', function() {
+    document.documentElement.classList.toggle('dark');
+    localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+});
+if (localStorage.getItem('theme') === 'dark') {
+    document.documentElement.classList.add('dark');
+}
+</script>
+
+</body>
+</html>
