@@ -138,3 +138,7 @@ Font sizes used:
   
     fa-clipboard-check:Home card
     Thank You!
+#8.License
+This project is open-source and available under the MIT License.
+
+    Copyright (c) 2026 Sheira-M1W4
